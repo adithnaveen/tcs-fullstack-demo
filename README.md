@@ -48,5 +48,5 @@ Given backend & the end points to be built:
 | Method | End Point            | Description + Payload |
 |--------|----------------------|-----------------------|
 | POST   | /api/register        | **To register the user with basic details:**<br>**Input:**<br>{<br>email: String,<br>name: String<br>password: String<br>address: {<br>houseno: Number,<br>street: String,<br>city: String,<br>state: String,<br>zip: Number<br>}<br>}<br>**Return code:** 201<br>**Return:**<br> {<br>id: Number,<br>name: String,<br>email: String,<br>password: String<br>address: {<br>houseno: Number,<br>street: String,<br>city: String,<br>state: String,<br>zip: Number<br>}<br>} <br>**Description:** The endpoint shall save the user record to the DBMS (MySQL), and as an acknowledgment, the actual object is returned (JSON).<br>**DBMS:** MySQL |
-
 | POST   | /api/authenticate    | **To validate the user is registered in the system:**<br>**Input:**<br> {<br>email: String,<br>password: String<br>} <br>**Return:** "JWT Token"<br>**Return Code:** 200<br>**When user details are wrong Return Code:** 403 (Forbidden) |
+|--------|----------------------|-----------------------|
